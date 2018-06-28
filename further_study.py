@@ -33,7 +33,7 @@ def custom_len(input_list):
     
     counter = 0
     for x in input_list:
-        counter = counter + 1
+        counter += 1
 
     return counter
 
@@ -63,7 +63,7 @@ def custom_append(input_list, value):
 
     """
 
-    pass
+    input_list[:] = input_list + [value]
 
 
 def custom_extend(input_list, second_list):
@@ -82,7 +82,7 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    input_list[:] = input_list + second_list
 
 
 def custom_insert(input_list, index, value):
@@ -100,7 +100,8 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    input_list[index:index] = [value]
+    #make copy of input_list 
 
 
 def custom_remove(input_list, value):
@@ -118,8 +119,12 @@ def custom_remove(input_list, value):
         True
 
     """
+    new_list = []
+    for item in input_list:
+        if item != value:
+            new_list[] = new + [value]
 
-    pass
+    
 
 
 def custom_pop(input_list):
